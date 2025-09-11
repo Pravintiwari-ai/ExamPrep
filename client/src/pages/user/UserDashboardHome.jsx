@@ -25,7 +25,6 @@ export default function UserDashboardHome() {
           <p style={styles.cardValue}>1 New</p>
         </div>
       </div>
-
       {/* Content Area */}
        {/* <div style={styles.contentCard}>
         <h3>Dashboard Content</h3>
