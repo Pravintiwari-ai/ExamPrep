@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react';
 
 const ChangePassword = () => {
-    const id = localStorage.getItem('userId');
+    const id = localStorage.getItem('userid');
     const [form, setForm] = useState({
         op:'',
         np:'',
@@ -20,7 +20,7 @@ const ChangePassword = () => {
         }
         catch(er){
             console.log(er)
-            alert("Password updated Successfully")
+            alert("Password not updated")
         }
     }
   return (

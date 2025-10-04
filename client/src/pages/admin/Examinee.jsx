@@ -57,6 +57,7 @@ const Examinee = () => {
     e.preventDefault();
     if (!editingId) return;
     try {
+      console.log(editingId);
       await axios.put(`http://localhost:5000/api/examinee/${editingId}`, form);
       alert('Examinee Updated Successfully');
       setForm({
@@ -93,18 +94,18 @@ const Examinee = () => {
                   <input className="form-control" name="email" value={form.email} onChange={handleChange} placeholder="Email" required />
                 </div>
                 <div className="col-sm-4">
-                  <input className="form-control" name="number" value={form.college} onChange={handleChange} placeholder="Collage" required />
+                  <input className="form-control" name="college" value={form.college} onChange={handleChange} placeholder="Collage" required />
                 </div>
               </div>
               <div className="row mb-2">
                 <div className="col-sm-4">
-                  <input className="form-control" name="address" value={form.course} onChange={handleChange} placeholder="Course" />
+                  <input className="form-control" name="course" value={form.course} onChange={handleChange} placeholder="Course" />
                 </div>
                 <div className="col-sm-4">
-                  <input className="form-control" name="college" value={form.branch} onChange={handleChange} placeholder="Branch" />
+                  <input className="form-control" name="branch" value={form.branch} onChange={handleChange} placeholder="Branch" />
                 </div>
                 <div className="col-sm-4">
-                  <input className="form-control" name="qualification" value={form.phone} onChange={handleChange} placeholder="Phone" />
+                  <input className="form-control" name="phone" value={form.phone} onChange={handleChange} placeholder="Phone" />
                 </div>
               </div>
               <button type="submit" className="btn btn-light text-white mb-1 me-2" style={{ background: "#39064fff " }}>Update</button>
